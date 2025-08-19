@@ -9,10 +9,11 @@ export const styles = {
   header: {
     backgroundColor: 'white',
     borderBottom: '1px solid #e5e7eb',
-    padding: '20px 32px',
+    padding: '16px 32px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    minHeight: '64px'
   },
   logo: {
     fontSize: '28px',
