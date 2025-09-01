@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import { styles } from './styles';
-import Step1Welcome from './components/Step1Welcome';
-import Step2IncomeSelection from './components/Step2IncomeSelection';
-import Step3SalaryDocuments from './components/Step3SalaryDocuments';
-import Step4BusinessDetails from './components/Step4BusinessDetails';
-import Header from './components/Header';
+import Step1Welcome from './Step1Welcome';
+import Step2IncomeSelection from './Step2IncomeSelection';
+import Step3SalaryDocuments from './Step3SalaryDocuments';
+import Step4BusinessDetails from './Step4BusinessDetails';
+import Header from './Header';
 
 interface StepProps {
   currentStep: number;

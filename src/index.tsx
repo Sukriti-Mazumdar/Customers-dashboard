@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TaxFilingApp from './TaxFilingsApp';
+import TaxFilingApp from './CustomerDashboard/TaxFilingsApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
