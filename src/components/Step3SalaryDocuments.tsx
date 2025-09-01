@@ -1,10 +1,16 @@
 import React from 'react';
 
-const Step3SalaryDocuments = ({ 
-  setCurrentStep, 
-  handleFileUpload, 
-  styles 
-}) => {
+interface Step3SalaryDocumentsProps {
+  setCurrentStep: (step: number) => void;
+  handleFileUpload: (event: React.ChangeEvent<HTMLInputElement>, fileType: string) => void;
+  styles: { [key: string]: React.CSSProperties };
+}
+
+const Step3SalaryDocuments = ({
+  setCurrentStep,
+  handleFileUpload,
+  styles
+}: Step3SalaryDocumentsProps) => {
   return (
     <div>
       <h1 style={styles.title}>Upload Salary Income Documents</h1>

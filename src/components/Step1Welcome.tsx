@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-const Step1Welcome = ({ setCurrentStep, styles }) => {
+interface Step1WelcomeProps {
+  setCurrentStep: (step: number) => void;
+  styles: { [key: string]: React.CSSProperties };
+}
+
+const Step1Welcome = ({ setCurrentStep, styles }: Step1WelcomeProps) => {
   return (
     <div>
       <div style={styles.welcomeSection}>

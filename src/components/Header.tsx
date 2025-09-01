@@ -1,7 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-const Header = ({ currentStep, setCurrentStep, styles }) => {
+interface HeaderProps {
+  currentStep: number;
+  setCurrentStep: (step: number) => void;
+  styles: { [key: string]: React.CSSProperties };
+}
+
+const Header = ({ currentStep, setCurrentStep, styles }: HeaderProps) => {
   return (
     <header style={styles.header}>
       <div style={styles.logo}>TAX</div>

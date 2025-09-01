@@ -1,4 +1,6 @@
-export const styles = {
+import React from 'react';
+
+export const styles: { [key: string]: React.CSSProperties } = {
   container: {
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     backgroundColor: '#ffffff',

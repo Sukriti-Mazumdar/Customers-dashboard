@@ -1,6 +1,12 @@
 import React from 'react';
 
-const styles = {
+interface Step2IncomeSelectionProps {
+  setCurrentStep: (step: number) => void;
+  selectedIncomeTypes: string[];
+  handleIncomeTypeToggle: (type: string) => void;
+}
+
+const styles: { [key: string]: React.CSSProperties } = {
   container: {
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     backgroundColor: '#ffffff',
@@ -10,30 +16,30 @@ const styles = {
   },
   
   logo: {
-    fontSize: '28px',
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#000',
     textDecoration: 'underline overline',
-    textDecorationThickness: '3px',
+    textDecorationThickness: 3,
   },
   dashboardLink: {
     color: '#6b7280',
     textDecoration: 'none',
-    fontSize: '16px',
-    fontWeight: '500'
+    fontSize: 16,
+    fontWeight: 500
   },
   backButton: {
     color: '#6b7280',
     textDecoration: 'none',
-    fontSize: '16px',
+    fontSize: 16,
     display: 'flex',
     alignItems: 'center',
-    gap: '8px',
-    fontWeight: '500'
+    gap: 8,
+    fontWeight: 500
   },
   userIcon: {
-    width: '32px',
-    height: '32px',
+    width: 32,
+    height: 32,
     borderRadius: '50%',
     backgroundColor: '#f3f4f6',
     display: 'flex',
@@ -41,45 +47,45 @@ const styles = {
     justifyContent: 'center'
   },
   main: {
-    maxWidth: '900px',
+    maxWidth: 900,
     margin: '0 auto',
     padding: '60px 32px'
   },
   title: {
-    fontSize: '36px',
-    fontWeight: '500',
+    fontSize: 36,
+    fontWeight: 500,
     color: '#111827',
     textAlign: 'center',
-    marginBottom: '12px'
+    marginBottom: 12
   },
   subtitle: {
-    fontSize: '18px',
+    fontSize: 18,
     color: '#6b7280',
     textAlign: 'center',
-    marginBottom: '48px'
+    marginBottom: 48
   },
   incomeGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    gap: '20px',
-    marginBottom: '48px',
-    maxWidth: '700px',
+    gap: 20,
+    marginBottom: 48,
+    maxWidth: 700,
     margin: '0 auto 48px'
   },
   incomeGridFull: {
     gridColumn: '1 / -1',
-    maxWidth: '340px',
+    maxWidth: 340,
     margin: '0 auto'
   },
   incomeCard: {
     border: '2px solid #e5e7eb',
-    borderRadius: '12px',
+    borderRadius: 12,
     padding: '32px 24px',
     textAlign: 'center',
     cursor: 'pointer',
     backgroundColor: 'white',
     transition: 'all 0.2s ease',
-    minHeight: '120px',
+    minHeight: 120,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -90,50 +96,50 @@ const styles = {
     backgroundColor: '#eff6ff'
   },
   incomeIcon: {
-    fontSize: '32px',
-    marginBottom: '16px',
+    fontSize: 32,
+    marginBottom: 16,
     display: 'block'
   },
   incomeTitle: {
-    fontSize: '16px',
-    fontWeight: '500',
+    fontSize: 16,
+    fontWeight: 500,
     color: '#111827',
-    lineHeight: '1.4'
+    lineHeight: 1.4
   },
   navigationButtons: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: '60px',
-    paddingTop: '32px',
+    marginTop: 60,
+    paddingTop: 32,
     borderTop: '1px solid #f3f4f6'
   },
   backBtn: {
     background: 'none',
     border: 'none',
     color: '#6b7280',
-    fontSize: '16px',
+    fontSize: 16,
     cursor: 'pointer',
-    padding: '12px',
-    fontWeight: '500'
+    padding: 12,
+    fontWeight: 500
   },
   nextBtn: {
     backgroundColor: '#1f2937',
     color: 'white',
     border: 'none',
-    borderRadius: '12px',
+    borderRadius: 12,
     padding: '14px 32px',
-    fontSize: '16px',
-    fontWeight: '600',
+    fontSize: 16,
+    fontWeight: 600,
     cursor: 'pointer'
   }
 };
 
-const Step2IncomeSelection = ({ 
-  setCurrentStep, 
-  selectedIncomeTypes, 
-  handleIncomeTypeToggle 
-}) => {
+const Step2IncomeSelection = ({
+  setCurrentStep,
+  selectedIncomeTypes,
+  handleIncomeTypeToggle
+}: Step2IncomeSelectionProps) => {
   const incomeOptions = [
     { id: 'salary', title: 'Income from Salary', icon: '💼' },
     { id: 'house', title: 'Income from House Property', icon: '🏠' },

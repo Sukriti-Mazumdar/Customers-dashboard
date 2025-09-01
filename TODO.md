@@ -1,0 +1,21 @@
+# TypeScript Conversion TODO
+
+- [x] Update package.json to add TypeScript dependencies (typescript, @types/react, @types/react-dom)
+- [x] Create tsconfig.json with basic configuration
+- [x] Rename src/index.js to src/index.tsx
+- [x] Rename src/TaxFilingsApp.jsx to src/TaxFilingsApp.tsx
+- [x] Rename src/components/Header.jsx to src/components/Header.tsx
+- [x] Rename src/components/Step1Welcome.jsx to src/components/Step1Welcome.tsx
+- [x] Rename src/components/Step2IncomeSelection.jsx to src/components/Step2IncomeSelection.tsx
+- [x] Rename src/components/Step3SalaryDocuments.jsx to src/components/Step3SalaryDocuments.tsx
+- [x] Rename src/components/Step4BusinessDetails.jsx to src/components/Step4BusinessDetails.tsx
+- [x] Rename src/styles.js to src/styles.ts
+- [x] Update src/index.tsx syntax and imports
+- [x] Update src/TaxFilingsApp.tsx syntax and types
+- [x] Update src/components/Header.tsx syntax and types
+- [x] Update src/components/Step2IncomeSelection.tsx syntax and types
+- [x] Update src/components/Step3SalaryDocuments.tsx syntax and types
+- [x] Update src/components/Step4BusinessDetails.tsx syntax and types
+- [x] Update src/styles.ts with types
+- [x] Install TypeScript dependencies
+- [x] Test build to ensure no errors

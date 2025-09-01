@@ -1,14 +1,24 @@
 import React from 'react';
 
-const Step4BusinessDetails = ({ 
-  setCurrentStep, 
+interface Step4BusinessDetailsProps {
+  setCurrentStep: (step: number) => void;
+  selectedIncomeTypes: string[];
+  businessType: string;
+  setBusinessType: (type: string) => void;
+  grossReceipts: string;
+  setGrossReceipts: (value: string) => void;
+  styles: { [key: string]: React.CSSProperties };
+}
+
+const Step4BusinessDetails = ({
+  setCurrentStep,
   selectedIncomeTypes,
   businessType,
   setBusinessType,
   grossReceipts,
   setGrossReceipts,
-  styles 
-}) => {
+  styles
+}: Step4BusinessDetailsProps) => {
   const businessTypeOptions = [
     { id: 'trader-2cr', label: 'Trader (Turnover < ₹2 Cr)' },
     { id: 'trader-3cr', label: 'Trader (95% online, Turnover < ₹3 Cr)' },
