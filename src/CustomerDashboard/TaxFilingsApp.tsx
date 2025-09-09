@@ -6,6 +6,7 @@ import Step2IncomeSelection from './Step2IncomeSelection';
 import Step3SalaryDocuments from './Step3SalaryDocuments';
 import Step4BusinessDetails from './Step4BusinessDetails';
 import Step5and6OperationalIncome from './Step5and6OperationalIncome';
+import Step7WhatsappUpdates from './Step7WhatsappUpdates';
 import Header from './Header';
 
 interface StepProps {
@@ -71,7 +72,9 @@ const TaxFilingApp: React.FC = () => {
         {currentStep === 2 && <Step2IncomeSelection {...stepProps} />}
         {currentStep === 3 && <Step3SalaryDocuments {...stepProps} />}
         {currentStep === 4 && <Step4BusinessDetails {...stepProps} />}
-        {currentStep === 5 && <Step5and6OperationalIncome mainSetCurrentStep={setCurrentStep} />}
+        {currentStep === 5 && <Step5and6OperationalIncome mainSetCurrentStep={setCurrentStep} currentStep={5} />}
+        {currentStep === 6 && <Step5and6OperationalIncome mainSetCurrentStep={setCurrentStep} currentStep={6} />}
+        {currentStep === 7 && <Step7WhatsappUpdates setCurrentStep={setCurrentStep} />}
       </main>
     </div>
   );

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const TaxFilingSteps = ({ mainSetCurrentStep }: { mainSetCurrentStep: (step: number) => void }) => {
-  const [currentStep, setCurrentStep] = useState(5);
+const TaxFilingSteps = ({ mainSetCurrentStep, currentStep }: { mainSetCurrentStep: (step: number) => void, currentStep: number }) => {
 
   const Step5 = () => (
     <div className="page-container">
@@ -60,7 +59,7 @@ const TaxFilingSteps = ({ mainSetCurrentStep }: { mainSetCurrentStep: (step: num
 
       <footer className="footer">
         <button className="nav-button secondary" onClick={() => mainSetCurrentStep(4)}>Back</button>
-        <button className="nav-button primary" onClick={() => setCurrentStep(6)}>Next</button>
+        <button className="nav-button primary" onClick={() => mainSetCurrentStep(6)}>Next</button>
       </footer>
 
       <button className="logout-button">⚊ Logout</button>
@@ -190,8 +189,8 @@ const TaxFilingSteps = ({ mainSetCurrentStep }: { mainSetCurrentStep: (step: num
       </main>
 
       <footer className="footer">
-        <button className="nav-button secondary" onClick={() => setCurrentStep(5)}>Back</button>
-        <button className="nav-button primary">Next</button>
+        <button className="nav-button secondary" onClick={() => mainSetCurrentStep(5)}>Back</button>
+        <button className="nav-button primary" onClick={() => mainSetCurrentStep(7)}>Next</button>
       </footer>
 
       <button className="logout-button">⚊ Logout</button>
