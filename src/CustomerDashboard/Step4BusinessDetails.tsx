@@ -102,7 +102,7 @@ const Step4BusinessDetails = ({
         >
           Back
         </button>
-        <button style={styles.nextBtn}>
+        <button style={styles.nextBtn} onClick={() => setCurrentStep(5)}>
           Next
         </button>
       </div>
